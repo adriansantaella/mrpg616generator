@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Martial Arts",
+        "type": "Physical & Combat",
+        "description": "Martial Arts is a power set that focuses on hand-to-hand combat and physical prowess. Characters with this power set are skilled fighters, often trained in various martial arts disciplines. They can deliver powerful strikes, perform acrobatic maneuvers, and have heightened reflexes and agility. This power set is ideal for characters who rely on their physical abilities to take down opponents and navigate through challenges."
+    },
+    {
+        "name": "Melee Weapons",
+        "type": "Physical & Combat",
+        "description": "Melee Weapons is a power set that emphasizes mastery over close-range weapons such as swords, clubs, or axes. Characters with this power set are skilled in using these weapons for offense and defense. They can deliver powerful strikes, parry attacks, and utilize their weapons in creative ways to gain an advantage in combat. This power set is ideal for characters who prefer a more direct and aggressive approach to fighting."
+    },
+    {
+        "name": "Ranged Weapons",
+        "type": "Physical & Combat",
+        "description": "Ranged Weapons is a power set that focuses on the use of long-range weapons such as firearms, bows, or energy projectors. Characters with this power set are skilled marksmen, able to hit targets from a distance with precision and accuracy. They can utilize various types of ranged weapons, each with its own unique capabilities and effects. This power set is ideal for characters who prefer to engage enemies from afar and maintain a strategic advantage."
+    },
+    {
+        "name": "Shield Bearer",
+        "type": "Physical & Combat",
+        "description": "Shield Bearer is a power set that revolves around the use of a shield for both offense and defense. Characters with this power set are skilled in using their shield to block incoming attacks, deflect projectiles, and deliver powerful strikes. They can also use their shield to create shockwaves or as a tool for mobility. This power set is ideal for characters who want to combine defensive capabilities with offensive prowess."
+    },
+    {
+        "name": "Super-Strength",
+        "type": "Physical & Combat",
+        "description": "Super-Strength is a power set that grants characters immense physical strength, allowing them to lift heavy objects, deliver powerful blows, and create shockwaves. Characters with this power set can overpower opponents with sheer force and are often resistant to physical damage. This power set is ideal for characters who rely on their physical abilities to take down enemies and overcome obstacles."
+    },
+    {
+        "name": "Tactics",
+        "type": "Physical & Combat",
+        "description": "Tactics is a power set that focuses on strategic thinking, command abilities, and squad coordination. Characters with this power set are skilled leaders and tacticians, able to devise battle plans, coordinate team efforts, and adapt to changing situations on the battlefield. They can inspire allies, outmaneuver opponents, and turn the tide of battle through superior strategy. This power set is ideal for characters who excel in leadership roles and prefer a more cerebral approach to combat."
+    },
+    {
+        "name": "Illusion",
+        "type": "Sensory & Cognitive",
+        "description": "Illusion is a power set that focuses on altering light and sound to deceive senses or digital grids."
+    },
+    {
+        "name": "Telepathy",
+        "type": "Sensory & Cognitive",
+        "description": "Telepathy is a power set that involves mind reading, mental links, and psychic blasts—or reskinned for digital networks."
+    },
+    {
+        "name": "Telekinesis",
+        "type": "Sensory & Cognitive",
+        "description": "Telekinesis is a power set that allows characters to move physical or organic objects with mental force."
+    },
+    {
+        "name": "Elemental Control",
+        "type": "Energy & Environmental",
+        "description": "Elemental Control is a power set that allows characters to manipulate fire, ice, water, earth, air, electricity, or magnetism."
+    },
+    {
+        "name": "Energy Control",
+        "type": "Energy & Environmental",
+        "description": "Energy Control is a power set that involves absorbing, redirecting, or projecting cosmic, kinetic, or photonic energy blasts."
+    },
+    {
+        "name": "Magic",
+        "type": "Energy & Environmental",
+        "description": "Magic is a power set that involves sorcery, chaos magic, or demonic arts using focus and mystical thresholds."
+    },
+    {
+        "name": "Omniversal Travel",
+        "type": "Energy & Environmental",
+        "description": "Omniversal Travel is a power set that allows characters to teleportation, dimensional warping, and jumping between universes."
+    },
+    {
+        "name": "Size Changing",
+        "type": "Energy & Environmental",
+        "description": "Size Changing is a power set that involves growth and shrinking mechanics."
+    },
+    {
+        "name": "Weather Control",
+        "type": "Energy & Environmental",
+        "description": "Weather Control is a power set that allows characters to manipulate lightning, wind, and ambient localized atmosphere."
+    },
+    {
+        "name": "Healing",
+        "type": "Regeneration & Resilience",
+        "description": "Healing is a power set that allows characters to rapidly recover from injuries, regenerate lost limbs, and resist toxins or diseases."
+    },
+    {
+        "name": "Invulnerability",
+        "type": "Regeneration & Resilience",
+        "description": "Invulnerability is a power set that grants characters near-imperviousness to physical harm, making them resistant to bullets, explosions, and extreme conditions."
+    },
+    {
+        "name": "Resilience",
+        "type": "Regeneration & Resilience",
+        "description": "Resilience is a power set that allows characters to endure extreme physical or mental stress without succumbing to fatigue or injury"
+    }
+]

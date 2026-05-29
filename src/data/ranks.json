@@ -1,0 +1,50 @@
+[
+    {
+        "rankNumber": 1,
+        "name": "Rookie",
+        "points": 5,
+        "cap": 5,
+        "powerpicks": 4,
+        "bonustrait": 1
+    },
+    {
+        "rankNumber": 2,
+        "name": "Protector",
+        "points": 10,
+        "cap": 6,
+        "powerpicks": 8,
+        "bonustrait": 2
+    },
+    {
+        "rankNumber": 3,
+        "name": "Champion",
+        "points": 15,
+        "cap": 7,
+        "powerpicks": 12,
+        "bonustrait": 2
+    },
+    {
+        "rankNumber": 4,
+        "name": "Legend",
+        "points": 20,
+        "cap": 8,
+        "powerpicks": 16,
+        "bonustrait": 2
+    },
+    {
+        "rankNumber": 5,
+        "name": "Mythic",
+        "points": 25,
+        "cap": 9,
+        "powerpicks": 20,
+        "bonustrait": 3
+    },
+    {
+        "rankNumber": 6,
+        "name": "Cosmic",
+        "points": 30,
+        "cap": 10,
+        "powerpicks": 24,
+        "bonustrait": 2
+    }
+]
