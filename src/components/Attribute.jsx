@@ -7,20 +7,22 @@ function Attribute(props) {
 
     return (
         <div className="attribute stat">
-            <span className="stat-label attribute-name">{attributename}:</span>
-            <input 
-                type="text"
-                className="attribute" 
-                name={attributename} 
-                min="0" 
-                max={rank && cap} 
-                value={value}
-                onChange={(e) => onChange(parseInt(e.target.value) || 0)} 
-            />
-            <span className="increment-buttons">
+            <div className="attribute-input">
+                <span className="stat-label attribute-name">{attributename}:</span>
+                <input
+                    type="text"
+                    className={`attribute ${value >= cap ? 'maxed-out' : ''}`}
+                    name={attributename}
+                    min="0"
+                    max={rank && cap}
+                    value={value}
+                    onChange={(e) => onChange(parseInt(e.target.value) || 0)}
+                />
+            </div>
+            <div className="increment-buttons">
                 <button onClick={() => onChange(Math.max(0, value - 1))} disabled={value <= 0}>-</button>
-                <button onClick={() => onChange(Math.min(rank ? cap : 0, value + 1))} disabled={pointsLeft <= 0}>+</button>
-            </span>
+                <button onClick={() => onChange(Math.min(rank ? cap : 0, value + 1))} disabled={pointsLeft <= 0 || rank?.cap <= value}>+</button>
+            </div>
         </div>
     )
 }
