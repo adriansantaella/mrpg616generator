@@ -11,7 +11,7 @@ function Attribute(props) {
                 <span className="stat-label attribute-name">{attributename}:</span>
                 <input
                     type="text"
-                    className={`attribute ${value >= cap ? 'maxed-out' : ''}`}
+                    className={`attribute-input-field ${value >= cap ? 'maxed-out' : ''}`}
                     name={attributename}
                     min="0"
                     max={rank && cap}
