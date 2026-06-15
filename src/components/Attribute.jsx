@@ -1,23 +1,21 @@
 import React, { useEffect } from 'react'
 import ranks from '../data/ranks.json'
+import { FaBurst } from "react-icons/fa6";
 
 function Attribute(props) {
-    const { rank, pointsLeft, attributename, value = 0, onChange } = props;
+    const { rank, pointsLeft, attributename, value = 0, onChange, isHighest } = props;
     const { rankNumber, name, cap, points, powerpicks, bonustrait } = rank || {};
 
     return (
-        <div className="attribute stat">
+        <div className={`attribute stat ${isHighest ? 'highest-attribute' : ''}`}>
             <div className="attribute-input">
                 <span className="stat-label attribute-name">{attributename}:</span>
-                <input
-                    type="text"
-                    className={`attribute-input-field ${value >= cap ? 'maxed-out' : ''}`}
-                    name={attributename}
-                    min="0"
-                    max={rank && cap}
-                    value={value}
-                    onChange={(e) => onChange(parseInt(e.target.value) || 0)}
-                />
+                <div className="attribute-value-container">
+                    <div className={`attribute-value ${value >= cap ? 'maxed-out' : ''}`}>
+                        <span>{value}</span>
+                        {value >= cap && <FaBurst className="burst-icon" />}
+                    </div>
+                </div>
             </div>
             <div className="increment-buttons">
                 <button onClick={() => onChange(Math.max(0, value - 1))} disabled={value <= 0}>-</button>
