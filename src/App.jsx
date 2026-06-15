@@ -151,8 +151,9 @@ function App() {
           <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Logic" value={logic} onChange={setLogic} isHighest={highestAttributes.some(attr => attr.name === 'Logic')} />
         </article>
 
-        <button className="generate-button" onClick={handleGenerate}><FaDiceD20 /></button>
       </section>
+      
+      <button className="generate-button" onClick={handleGenerate}><FaDiceD20 /></button>
 
     </>
   )
