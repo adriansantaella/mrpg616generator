@@ -96,6 +96,7 @@ function App() {
     setPointsLeft(rank ? rank.points - totalPoints : 0);
 
     // get the two highest attributes and log them
+    
     const attributes = [
       { name: 'Melee', value: melee },
       { name: 'Agility', value: agility },
@@ -104,10 +105,15 @@ function App() {
       { name: 'Ego', value: ego },
       { name: 'Logic', value: logic }
     ];
-
+    
+    // highlight all attributes that satisfy the two highest values
     const sortedAttributes = attributes.sort((a, b) => b.value - a.value);
-    const highestAttributes = sortedAttributes.slice(0, 2);
-    setHighestAttributes(highestAttributes);
+    const highAttributes = attributes.filter((attr) =>
+      (attr.value === sortedAttributes[0].value && sortedAttributes[0].value !== 0) ||
+      (attr.value === sortedAttributes[1].value && sortedAttributes[1].value !== 0)
+    );
+
+    setHighestAttributes(highAttributes);
 
   },[melee, agility, resilience, vigilance, ego, logic])
 
