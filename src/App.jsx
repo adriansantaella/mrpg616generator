@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import './App.css'
 import Rank from './components/Rank'
@@ -9,7 +9,15 @@ import genders from './data/genders.json'
 import ranks from './data/ranks.json'
 import { FaDiceD20 } from "react-icons/fa";
 
-const abilities = new Array('Melee', 'Agility', 'Resilience', 'Vigilance', 'Ego', 'Logic');
+const abilities = ['Melee', 'Agility', 'Resilience', 'Vigilance', 'Ego', 'Logic'];
+const defaultStats = {
+  Melee: 0,
+  Agility: 0,
+  Resilience: 0,
+  Vigilance: 0,
+  Ego: 0,
+  Logic: 0,
+};
 
 function App() {
   // generator for MARVEL RPG character stats
@@ -17,105 +25,74 @@ function App() {
   const [heroName, setHeroName] = useState('');
   const [gender, setGender] = useState('');
   const [powerset, setPowerset] = useState([]);
-  
-  const [pointsLeft, setPointsLeft] = useState(0);
-  
-  const [melee, setMelee] = useState(0);
-  const [agility, setAgility] = useState(0);
-  const [resilience, setResilience] = useState(0);
-  const [vigilance, setVigilance] = useState(0);
-  const [ego, setEgo] = useState(0);
-  const [logic, setLogic] = useState(0);
-
-  const [highestAttributes, setHighestAttributes] = useState([]);
+  const [stats, setStats] = useState(defaultStats);
+  const { Melee, Agility, Resilience, Vigilance, Ego, Logic } = stats;
   
 
   const generateName = () => {
-    // Placeholder for generate name functionality
     const randomName = heronames[Math.floor(Math.random() * heronames.length)];
     setHeroName(randomName);
   }
 
-  const generateRank = () => {
-      const randomRank = ranks[Math.floor(Math.random() * ranks.length)];
-      setRank(randomRank);
-  }
-
-  const generatePowerSet = () => {
-    const numberOfPowersets = rank.powerpicks;
-    console.log(`Generating ${numberOfPowersets} powersets for rank ${rank.name}`);
-  }
-
-  const handleGenerate = () => {
-    generateName();
-    generateRank();
-  }
-  
   const randomAbilitySelection = () => {
-    const randomAbility = abilities[Math.floor(Math.random() * abilities.length)];
-    return randomAbility;
+    return abilities[Math.floor(Math.random() * abilities.length)];
   }
-    
-  useEffect(() => {
-    if(!rank) return;
 
-    const pointsToSpend = rank.points;
+  const generateStatsForRank = (rankToUse) => {
+    if (!rankToUse) return defaultStats;
+
+    const pointsToSpend = rankToUse.points;
     const newStats = {
       Melee: 0,
       Agility: 0,
       Resilience: 0,
       Vigilance: 0,
       Ego: 0,
-      Logic: 0
+      Logic: 0,
     };
 
     let pointsSpent = 0;
-
     while (pointsSpent < pointsToSpend) {
       const ability = randomAbilitySelection();
-      if (newStats[ability] < rank.cap) {
+      if (newStats[ability] < rankToUse.cap) {
         newStats[ability]++;
         pointsSpent++;
       }
     }
 
-    setMelee(newStats.Melee);
-    setAgility(newStats.Agility);
-    setResilience(newStats.Resilience);
-    setVigilance(newStats.Vigilance);
-    setEgo(newStats.Ego);
-    setLogic(newStats.Logic);
-  }, [rank])
+    return newStats;
+  }
+
+  const applyRankAndStats = (selectedRank) => {
+    setRank(selectedRank);
+    setStats(generateStatsForRank(selectedRank));
+  }
+
+  const handleGenerate = () => {
+    const randomName = heronames[Math.floor(Math.random() * heronames.length)];
+    const randomRank = ranks[Math.floor(Math.random() * ranks.length)];
+
+    setHeroName(randomName);
+    applyRankAndStats(randomRank);
+  }
 
   useEffect(() => {
     console.log(`Hero name changed to: ${heroName}`);
   },[heroName])
 
-  useEffect(() => {
-    const totalPoints = melee + agility + resilience + vigilance + ego + logic;
-    setPointsLeft(rank ? rank.points - totalPoints : 0);
+  const totalPoints = Object.values(stats).reduce((sum, value) => sum + value, 0);
+  const pointsLeft = rank ? rank.points - totalPoints : 0;
 
-    // get the two highest attributes and log them
-    
-    const attributes = [
-      { name: 'Melee', value: melee },
-      { name: 'Agility', value: agility },
-      { name: 'Resilience', value: resilience },
-      { name: 'Vigilance', value: vigilance },
-      { name: 'Ego', value: ego },
-      { name: 'Logic', value: logic }
-    ];
-    
-    // highlight all attributes that satisfy the two highest values
-    const sortedAttributes = attributes.sort((a, b) => b.value - a.value);
-    const highAttributes = attributes.filter((attr) =>
-      (attr.value === sortedAttributes[0].value && sortedAttributes[0].value !== 0) ||
-      (attr.value === sortedAttributes[1].value && sortedAttributes[1].value !== 0)
-    );
+  const highestAttributes = useMemo(() => {
+    const attributes = Object.entries(stats).map(([name, value]) => ({ name, value }));
+    const sortedAttributes = [...attributes].sort((a, b) => b.value - a.value);
+    const highConditions = new Set([
+      sortedAttributes[0]?.value,
+      sortedAttributes[1]?.value,
+    ]);
 
-    setHighestAttributes(highAttributes);
-
-  },[melee, agility, resilience, vigilance, ego, logic])
+    return attributes.filter((attr) => attr.value !== 0 && highConditions.has(attr.value));
+  }, [stats]);
 
 
   return (
@@ -123,7 +100,9 @@ function App() {
       <section className="container">
         <h1 className="app-title">Marvel RPG Character Generator</h1>
         <article className="general-info">
-          <h2 className="app-subtitle">General</h2>
+          <div className="app-subtitle">
+            <span>General</span>
+          </div>
           <div className="hero-name stat">
             <div className="hero-name-input">
               <span className="stat-label">Name:</span>
@@ -142,19 +121,22 @@ function App() {
               ))}
             </select>
           </div>
-          <Rank rank={rank} onRankChange={setRank} />
+          <Rank rank={rank} onRankChange={applyRankAndStats} />
         </article>
 
         
         <article className='attribute-container'>
-          <h2 className="app-subtitle">Attributes</h2>
-          <h3 className='points-left'><span>Points Left: {pointsLeft}</span></h3>
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Melee" value={melee} onChange={setMelee} isHighest={highestAttributes.some(attr => attr.name === 'Melee')} />
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Agility" value={agility} onChange={setAgility} isHighest={highestAttributes.some(attr => attr.name === 'Agility')} />
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Resilience" value={resilience} onChange={setResilience} isHighest={highestAttributes.some(attr => attr.name === 'Resilience')} />
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Vigilance" value={vigilance} onChange={setVigilance} isHighest={highestAttributes.some(attr => attr.name === 'Vigilance')} />
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Ego" value={ego} onChange={setEgo} isHighest={highestAttributes.some(attr => attr.name === 'Ego')} />
-          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Logic" value={logic} onChange={setLogic} isHighest={highestAttributes.some(attr => attr.name === 'Logic')} />
+          <div className="app-subtitle">
+            <span className="">Attributes</span>
+            <div className="separator"></div>
+            <span>Points Left: {pointsLeft}</span>
+          </div>
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Melee" value={Melee} onChange={(value) => setStats((prev) => ({ ...prev, Melee: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Melee')} />
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Agility" value={Agility} onChange={(value) => setStats((prev) => ({ ...prev, Agility: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Agility')} />
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Resilience" value={Resilience} onChange={(value) => setStats((prev) => ({ ...prev, Resilience: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Resilience')} />
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Vigilance" value={Vigilance} onChange={(value) => setStats((prev) => ({ ...prev, Vigilance: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Vigilance')} />
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Ego" value={Ego} onChange={(value) => setStats((prev) => ({ ...prev, Ego: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Ego')} />
+          <Attribute rank={rank} pointsLeft={pointsLeft} attributename="Logic" value={Logic} onChange={(value) => setStats((prev) => ({ ...prev, Logic: value }))} isHighest={highestAttributes.some((attr) => attr.name === 'Logic')} />
         </article>
 
       </section>

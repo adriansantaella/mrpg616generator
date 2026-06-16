@@ -1,0 +1,193 @@
+[
+    {
+        "title": "Adventurer",
+        "description": "The character focuses on having adventures. Perhaps they're independently wealthy and don't need another occupation, or maybe they hire out their services.",
+        "tags": [
+            "Black Market Access"
+        ],
+        "traits": [
+            "Fearless",
+            "Connections: Super Heroes or Villains"
+        ]
+    },
+    {
+        "title": "Assassin",
+        "description": "The character is a hired killer. They might tell themselves that this is for the greater good. They might be picky about who they take on as clients or targets, but the core of their occupation is ending lives.",
+        "tags": [
+            "Streetwise",
+            "Villainous (common)"
+        ],
+        "traits": [
+            "Connections: Criminal",
+            "Signature Attack"
+        ]
+    },
+    {
+        "title": "Criminal",
+        "description": "The character did something that put them on the wrong side of the law. They might have spent time in jail for their crimes, or they might have gotten away with them scot-free. The fact that they break the law doesn't necessarily make them a bad person, but law en forcers usually don't care about such distinctions. If they are currently wanted by the law for their crimes, they should also take the Hunted tag. If they have served time, they should take the Convict tag too.",
+        "tags": [
+            "Black Market Access",
+            "Streetwise"
+        ],
+        "traits": [
+            "Connections: Criminal"
+        ]
+    },
+    {
+        "title": "Educator",
+        "description": "The character educates others. They might be a gradeschool teacher, a college professor or some other kind of instructor. They do their best to bring the knowledge they have to other people.",
+        "tags": [],
+        "traits": [
+            "Connections: Community",
+            "Font of Information",
+            "Presence"
+        ]
+    },
+    {
+        "title": "Engineer",
+        "description": "The character designs and builds things to solve problems. They sometimes invent brand-new things, but mostly they take scientific research and apply it to real-world problems.",
+        "tags": [
+            "Lab Access"
+        ],
+        "traits": [
+            "Gearhead",
+            "Inventor"
+        ]
+    },
+    {
+        "title": "Entertainer",
+        "description": "The character entertains others for a living. They could be a singer, a dancer, an actor, a musician, a writer, a filmmaker, a speaker or something similar. They aren't shy-at least when on the job- and they work hard to both gain an audience and keep them engaged.",
+        "tags": [],
+        "traits": [
+            "Famous",
+            "Presence",
+            "Public Speaking"
+        ]
+    },
+    {
+        "title": "Health Care Worker",
+        "description": "The character is a doctor, nurse, therapist or other person dedicated to helping heal others. They likely have access to an office where they practice their craft.",
+        "tags": [],
+        "traits": [
+            "Clinician",
+            "First Aid"
+        ]
+    },
+    {
+        "title": "Investigator",
+        "description": "The character is trained to solve mysteries. This can be as a private detective or as part of an official law enforcement organization, ranging from the New York Police Department to the Federal Bureau of Investigation, S.H.I.E.L.D. or even the Nova Corps.",
+        "tags": [],
+        "traits": [
+            "Connections: Police",
+            "Interrogation",
+            "Investigation"
+        ]
+    },
+    {
+        "title": "Journalist",
+        "description": "The character works as a reporter or editor for a news organization. This can range anywhere from the Daily Bugle to TNM (Threats and Menaces). It can also include any sort of reporting, whether TV, radio, newspaper or online.",
+        "tags": [],
+        "traits": [
+            "Audience",
+            "Connections: Sources",
+            "Pundit"
+        ]
+    },
+    {
+        "title": "Law Enforcer",
+        "description": "The character works as a law enforcement officer. They could be anything from a town cop to an agent of S.H.I.E.L.D. They have a great deal of authority inside their jurisdiction and often command respect outside of it as well.",
+        "tags": [
+            "Authority",
+            "Backup"
+        ],
+        "traits": [
+            "Interrogation",
+            "Investigation"
+        ]
+    },
+    {
+        "title": "Lawyer",
+        "description": "The character has a law degree and knows how to use it. They might work for a gigantic and powerful law firm, or they might have set up their own practice",
+        "tags": [],
+        "traits": [
+            "Dealmaker",
+            "Legal Eagle",
+            "Public Speaking"
+        ]
+    },
+    {
+        "title": "Leader",
+        "description": "The character is the leader of a city, region, state or nation. This includes things like being the elected mayor of New York City or the hereditary king of a country.",
+        "tags": [
+            "Authority",
+            "Powerful"
+        ],
+        "traits": [
+            "Presence"
+        ]
+    },
+    {
+        "title": "Military",
+        "description": "The character serves (or at least once served) in a military organization and relies on that training. They can sometimes all on their fellow soldiers for help. They may have worked for a nation or possibly as part of a mercenary outfit. If they are on active duty, their time is often not their own, and they should take the tag Obligation: Duty.",
+        "tags": [],
+        "traits": [
+            "Battle Ready",
+            "Connections: Military",
+            "Situational Awareness"
+        ]
+    },
+    {
+        "title": "Outsider",
+        "description": "The character comes from another planet, dimension or time and is not familiar with how things work on this Earth. They may have had another occupation back where they came from, but it's not generally applicable here.",
+        "tags": [],
+        "traits": [
+            "Connections: Outsiders",
+            "Fresh Eyes",
+            "Stranger"
+        ]
+    },
+    {
+        "title": "Scientist",
+        "description": "The character solves problems by means of scientific research. They are often among the smartest people in the world, and other heroes turn to them for their expertise.",
+        "tags": [
+            "Lab Access"
+        ],
+        "traits": [
+            "Inventor",
+            "Scientific Expertise"
+        ]
+    },
+    {
+        "title": "Spy",
+        "description": "The character is an expert in espionage. They served as a spy for a nation or corporation and know how to find things out about people and organizations.",
+        "tags": [
+            "Black Market Access"
+        ],
+        "traits": [
+            "Connections: Espionage",
+            "Leverage"
+        ]
+    },
+    {
+        "title": "Student",
+        "description": "The character attends school or college on a full-time basis. What they study or focus on is up to them and their school. Most people start out with this occupation, but once they graduate, they move on to something new. If that happens with your character, you can then select a new occupation to replace this one.",
+        "tags": [
+            "Mentor",
+            "Obligation: School"
+        ],
+        "traits": [
+            "Quick Learner"
+        ]
+    },
+    {
+        "title": "Tycoon",
+        "description": "The character is wildly wealthy and well-known. They want for nothing, and they make a splash wherever they go. They get invited to the best parties and let into all the VIP sections.",
+        "tags": [
+            "Rich"
+        ],
+        "traits": [
+            "Connections: Celebrities",
+            "Famous"
+        ]
+    }
+]

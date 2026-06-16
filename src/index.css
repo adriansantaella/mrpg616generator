@@ -138,11 +138,27 @@ code {
 }
 
 .app-subtitle {
-  font-size: 1.5rem;
-  padding: 0.5rem 0;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
   font-family: 'Boogaloo';
-  color: var(--accent);
+  gap: 1rem;
+  background: #fff2;
+  padding: .5rem 1rem;
+  border: 2px solid var(--accent);
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.app-subtitle span {
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  white-space: pre;
 }
 
 .rank-dropdown {
@@ -151,31 +167,6 @@ code {
   position: relative;
   display: block;
   gap: 1rem;
-  width: 100%;
-}
-
-.points-left {
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
-  font-family: 'Boogaloo';
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 0 1rem;
-}
-
-.points-left span {
-  white-space: nowrap;
-  padding: 0.5rem 1rem;
-}
-
-.points-left::before,
-.points-left::after {
-  content: " ";
-  display: block;
-  color: var(--accent);
-  border-bottom: 2px solid white;
   width: 100%;
 }
 
@@ -230,7 +221,7 @@ code {
 
 .hero-name button {
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   border: 0;
   color: var(--accent);
   cursor: pointer;
