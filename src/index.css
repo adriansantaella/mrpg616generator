@@ -110,6 +110,10 @@ code {
   background: var(--code-bg);
 }
 
+article + article {
+  margin-top: 2rem;
+}
+
 .container {
   display: flex;
   flex-grow: 1;
@@ -145,9 +149,15 @@ code {
   justify-content: space-between;
   font-family: 'Boogaloo';
   gap: 1rem;
-  background: #fff2;
-  padding: .5rem 1rem;
+  background: var(--accent);
+  padding: 1.5vw;
   border: 2px solid var(--accent);
+}
+
+.app-subtitle span {
+  color: #fff;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  white-space: pre;
 }
 
 .separator {
@@ -155,21 +165,6 @@ code {
   height: 2px;
   background: white;
 }
-
-.app-subtitle span {
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
-  white-space: pre;
-}
-
-.rank-dropdown {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  display: block;
-  gap: 1rem;
-  width: 100%;
-}
-
 
 .stat {
   display: flex;
@@ -182,6 +177,13 @@ code {
   width: 100%;
 }
 
+.input-group, .attribute-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 100%;
+}
+
 .stat-label {
   font-weight: 900;
   font-family: "Boogaloo";
@@ -189,37 +191,27 @@ code {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
-.rank-dropdown select, .gender-select {
+.input-group input, .input-group select {
   font-size:  clamp(1rem, 2vw, 1.5rem);
   padding: 0.5rem;
   border: 0;
   background: var(--bg);
   font-family: 'Boogaloo';
-}
-
-.rank-dropdown .rank-select,
-.gender-select {
   width: 100%;
 }
 
-
-.hero-name input, .hero-name input {
+.stat input {
   font-size:  clamp(1rem, 2vw, 1.5rem);
   padding: 0.5rem;
   width: 100%;
   background: var(--bg);
   font-family: 'Boogaloo';
-  border: 0;
+  /* border: 0; */
 }
 
-.hero-name-input, .attribute-input {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-basis: 100%;
-}
 
-.hero-name button {
+
+.generate-button {
   font-size: 1.5rem;
   padding: 0.5rem 0;
   border: 0;
@@ -230,7 +222,7 @@ code {
   background: transparent;
 }
 
-.generate-button {
+.generate-banner-button {
   position: sticky;
   background: var(--accent);
   color: white;
@@ -248,11 +240,11 @@ code {
   z-index: 100;
 }
 
-.generate-button:active {
+.generate-banner-button:active {
   background-color: var(--accent-border);
 }
 
-.generate-button:hover {
+.generate-banner-button:hover {
   background-color: var(--accent-border);
 }
 
@@ -261,11 +253,16 @@ code {
 * Attribute styles
 **************************************************/
 
-.attribute-container {
+.section-container {
+  width: 100%;
+  border: 3px solid var(--accent);
+}
+
+.section-content {
+  padding: 1.5rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  gap: 1rem;
 }
 
 .attribute {

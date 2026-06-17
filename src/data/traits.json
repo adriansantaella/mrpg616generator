@@ -1,292 +1,349 @@
 [
     {
+        "id": 0,
         "title": "Abrasive",
         "description": "The character rubs people the wrong way. This gives them trouble when trying to make Ego checks to persuade someone to help them out. It gives them an edge when they're trying to make Ego checks to intimidate someone.",
         "restriction": ""
     },
     {
+        "id": 1,
         "title": "Anathema",
         "description": "The character suffers direct harm when exposed to a particular substance. They cannot voluntarily enter the same space with it. If they are touched by it, they instantly suffer the damage of a Rank 3 attack roll that automatically succeeds. This continues each turn until they are separated from the substance or are killed or destroyed. Damage caused by Anathema ignores all damage reduction the character has and cannot be healed by their Healing Factor.",
         "restriction": ""
     },
     {
+        "id": 2,
         "title": "Audience",
         "description": "Many people follow the character's work and treat them with the respect they deserve. By making an Ego check, the character can persuade their audience to provide help in the form of information or resources. The Narrator determines the TN of the Ego check based on the favor requested.",
         "restriction": ""
     },
     {
+        "id": 3,
         "title": "Battle Ready",
         "description": "The character is always mentally prepared for any sort of trouble to start. Add +30 Focus.",
         "restriction": ""
     },
     {
+        "id": 4,
         "title": "Beguiling",
         "description": "The character has an edge when making an Ego check to persuade someone who could be attracted to them.",
         "restriction": ""
     },
     {
+        "id": 5,
         "title": "Berserker",
         "description": "The character often loses control of their temper. Any time they take physical damage, they must make an Ego check with a TN equal to the amount of damage done. If they fail, they go berserk and must charge at full speed into combat with the enemy who hurt them. Being berserk gives the character an edge on all close attacks and adds +2 to their Melee, Resilience and Ego defen ses. However, it takes - 2 from their Agility defense, and they cannot use ranged weapons. If the character defeats the enemy who hurt them, they must then charge to attack the next closest foe. At the end of the character's turn, they lose 5 Focus. When their Focus is reduced to the point that the character could not voluntarily spend any more Focus- or if there are no enemies in sight- the berserk state automatically ends.",
         "restriction": ""
     },
     {
+        "id": 6,
         "title": "Big",
         "description": "The character's size is big, which applies -1 to their Melee and Agility defenses, adds +1 to their Run Speed, and increases their reach to 2. They still occupy a single space.",
         "restriction": ""
     },
     {
+        "id": 7,
         "title": "Bloodthirsty",
         "description": "The character likes hurting people-even killing them. After they knock someone unconscious, they must make a Challenging Ego check to keep from continuing to attack them until they're dead.",
         "restriction": "A character with this trait cannot take the Heroic tag."
     },
     {
+        "id": 8,
         "title": "Breathe Different",
         "description": "The character cannot breathe Earth's air for long. They lose 1 point of Health for every minute they do not have some sort of assistance to allow them to breathe properly.",
         "restriction": ""
     },
     {
+        "id": 9,
         "title": "Clinician",
         "description": "The character has an edge on Logic checks to determine what is medically wrong with someone they examine.",
         "restriction": ""
     },
     {
+        "id": 10,
         "title": "Clueless",
         "description": "The character tends to shut out things they're not entirely focused on. They have trouble on any Vigilance checks to spot hidden or invisible things. Enemies have an edge on Agility checks to sneak near or past them.",
         "restriction": ""
     },
     {
+        "id": 11,
         "title": "Combat Expert",
         "description": "The character knows how to handle themselves better than most. They have an edge on Melee attacks against enemies of Rank 1.",
         "restriction": ""
     },
     {
+        "id": 12,
         "title": "Combat Reflexes",
         "description": "The character can react quickly in combat. This grants them one additional reaction each turn.",
         "restriction": ""
     },
     {
+        "id": 13,
         "title": "Connections",
         "description": "The character knows someone with access to and knowledge of a particular field. The connection could be a reporter, a police officer, a politician, a mobster and so on. By making an Ego check, the character can call on their contact to provide help in the form of clues, information or resources. The Narrator determines the TN of the Ego check based on the favor requested. This trait can be selected multiple times, using many different types. These include Celebrities, Community, Criminal, Espionage, Military, Outsiders, Police, Professional Sources, Super Heroes and so on.",
         "restriction": ""
     },
     {
+        "id": 14,
         "title": "Dealmaker",
         "description": "The character is skilled at the art of negotiation. They have an edge on action checks that have to do with making deals.",
         "restriction": ""
     },
     {
+        "id": 15,
         "title": "Determination",
         "description": "The character never gives up, even when they feel like they're at their worst. While demoralized, they do not gain trouble on all actions, though they still cannot maintain concentration or spend further Focus.",
         "restriction": ""
     },
     {
+        "id": 16,
         "title": "Eidetic Memory",
         "description": "The character rarely forgets anything. If their player forgets something, they can ask the Narrator to remind them.",
         "restriction": ""
     },
     {
+        "id": 17,
         "title": "Enduring Constitution",
         "description": "The character can function for up to 48 hours without sleep and has an edge on Resilience checks to overcome fatigue or weariness.",
         "restriction": ""
     },
     {
+        "id": 18,
         "title": "Enhanced Physique",
         "description": "The character is stronger than regular humans. Treat them as one size bigger for lifting, carrying, swinging and throwing things. (This does not stack with other factors.)",
         "restriction": ""
     },
     {
+        "id": 19,
         "title": "Extra Occupation",
         "description": "The character has a busy life and has done all sorts of things. They can choose another occupation.",
         "restriction": ""
     },
     {
+        "id": 20,
         "title": "Extraordinary Origin",
         "description": "The character has an additional origin. This trait can be selected multiple times, but each time must be cleared with the Narrator. Take care to make sure that the origins make some kind of sense when combined together.",
         "restriction": ""
     },
     {
+        "id": 21,
         "title": "Famous",
         "description": "The character is widely known-at least among a certain group of people or a population. They may be well-liked or they may be hated, but either way, they are famous. They have an edge when making an Ego check to persuade someone who thinks favorably of them. They have trouble when making an Ego check to persuade someone who dislikes them. If the character has a secret identity, this trait works for only one of their identities. However, it can be taken multiple times for multiple identities.",
         "restriction": ""
     },
     {
+        "id": 22,
         "title": "Fearless",
         "description": "The character is extremely brave. They have an edge on any action checks required to deal with fear.",
         "restriction": ""
     },
     {
+        "id": 23,
         "title": "First Aid",
         "description": "The character knows how to administer first aid. They have an edge on Logic checks to stop bleeding.",
         "restriction": ""
     },
     {
+        "id": 24,
         "title": "Font of Information",
         "description": "The character has an edge on Logic checks having to do with knowledge.",
         "restriction": ""
     },
     {
+        "id": 25,
         "title": "Free Running",
         "description": "The character has an edge on Agility checks made to perform acrobatics during a movement action.",
         "restriction": ""
     },
     {
+        "id": 26,
         "title": "Fresh Eyes",
         "description": "The character has their own way of doing things. This often makes them seem strange to those around them, but it means they can bring new perspectives to existing issues. They have an edge on Logic checks when faced with something for the first time.",
         "restriction": ""
     },
     {
+        "id": 27,
         "title": "Gearhead",
         "description": "The character knows their way around machines. They have an edge on Logic checks to figure out how any machine works.",
         "restriction": ""
     },
     {
+        "id": 28,
         "title": "Glibness",
         "description": "The character can strike up a conversation with anyone at any time and can often convince them to lend a hand. They have an edge on Ego checks to persuade characters they are speaking to for the first time.",
         "restriction": ""
     },
     {
+        "id": 29,
         "title": "God Heritage",
         "description": "The character-or at least one of their ancestors-is a god. Pick something that they are the god of. They don't have to be a god that most people have heard of. In fact,they can be the god of something entirely new. However, they cannot generally be the god of something that's already been claimed by someone else in their pantheon. Other gods are often jealous of their positions and take issue with such rivals. The character has an edge when dealing with something that theyare the god of.",
         "restriction": "This trait can be selected only by characters with a mythic origin and an attachment to a particular pantheon, like Asgardian or Olympian."
     }
 ,
     {
+        "id": 30,
         "title": "Gullible",
         "description": "The character is easy to fool. People lying to them have an edge on their Ego checks to persuade the character of something.",
         "restriction": ""
     }
 ,
     {
+        "id": 31,
         "title": "Honest",
         "description": "The character is a terrible liar. They have trouble any time they make an Ego check that involves telling a lie. However, they have an edge on any friendly Ego (persuasion) checks in which they're truthful.",
         "restriction": ""
     }
 ,
     {
+        "id": 32,
         "title": "Interrogation",
         "description": "The character knows how to ask the right questions in the right way. They have an edge on Ego or Logic checks made when asking questions.",
         "restriction": ""
     }
 ,
     {
+        "id": 33,
         "title": "Inventor",
         "description": "The character is good at coming up with solutions on the fly. They have an edge on Logic checks when creating or repairing things.",
         "restriction": ""
     }
 ,
     {
+        "id": 34,
         "title": "Investigation",
         "description": "The character is an expert investigator. They have an edge on Vigilance checks to spot clues and on Logic checks related to interpreting clues. If they have access to a forensics lab at the time, they gain a second edge on such checks.",
         "restriction": ""
     }
 ,
     {
+        "id": 35,
         "title": "Iron Will",
         "description": "Enemies have trouble on Ego attacks to control the character's mind or influence their behavior. Also, the character gains an edge on Ego checks to break free of mind control or other compulsions.",
         "restriction": ""
     }
 ,
     {
+        "id": 36,
         "title": "Legal Eagle",
         "description": "The character knows the laws of their homeland and can help others navigate them. They have an edge on Logic checks when dealing with legalities.",
         "restriction": ""
     },
     {
+        "id": 37,
         "title": "Leverage",
         "description": "The character is good at figuring out what people want and using it against them. They have an edge on Logic checks to investigate people and on Ego checks to persuade people they've investigated.",
         "restriction": ""
     },
     {
+        "id": 38,
         "title": "Loner",
         "description": "The character does not play well with others. They cannot be given an edge via assistance by someone who is not a teammate.",
         "restriction": ""
     },
     {
+        "id": 39,
         "title": "Monster",
         "description": "The character is some kind of monster, often of a type spoken of in legend. They have an edge whenever they attempt to intimidate someone.",
         "restriction": ""
     },
     {
+        "id": 40,
         "title": "Out of Shape",
         "description": "The character iis in poor physical condition. They are considered one size smaller for the purposes of lifting, carrying, swinging and throwing things.",
         "restriction": ""
     },
     {
+        "id": 41,
         "title": "Piloting",
         "description": "The character knows how to operate vehicles of all kinds. They have an edge on Agility checks triggered when piloting or driving a vehicle during a movement action. This applies to cars, boats, aircraft and so on.",
         "restriction": ""
     },
     {
+        "id": 42,
         "title": "Presence",
         "description": "The character knows how to command attention on demand. They have an edge on Ego checks that involve getting people to pay attention to them or to voluntarily do things for them.",
         "restriction": ""
     },
     {
+        "id": 43,
         "title": "Public Speaking",
         "description": "The character knows how to get the attention of a crowd, whether that's at a political rally or in front of a jury or a classroom. They have an edge on Ego checks when attempting to persuade groups.",
         "restriction": ""
     },
     {
+        "id": 44,
         "title": "Pundit",
         "description": "The character knows how to break news items and put them into context to craft a story around them. They have an edge on Ego or Logic rolls made when giving their opinion via media.",
         "restriction": ""
     },
     {
+        "id": 45,
         "title": "Quick Learner",
         "description": "If the character fails an action check, they gain an edge on the check if they try the same action again on their next turn.",
         "restriction": ""
     },
     {
+        "id": 46,
         "title": "Scientific Expertise",
         "description": "The character has extensive scientific training. They have an edge on Logic checks made when dealing with scientific research. If they have access to an appropriate lab at the time, they gain a second edge on such checks.",
         "restriction": ""
     },
     {
+        "id": 47,
         "title": "Signature Attack",
         "description": "The character is known for favoring a particular kind of weapon or attack power. They have an edge when making attacks that way. This trait can be taken more than once, but each time must be with a different kind of weapon or attack power.",
         "restriction": ""
     },
     {
+        "id": 48,
         "title": "Situational Awareness",
         "description": "The character is trained to always keep an eye out for trouble. They have an edge on initiative checks.",
         "restriction": ""
     },
     {
+        "id": 49,
         "title": "Skeptical",
         "description": "The character is hard to fool. People lying to them have trouble on their Ego checks to persuade the character of something.",
         "restriction": ""
     },
     {
+        "id": 50,
         "title": "Small",
         "description": "The character's size is small, which adds +1 to their Melee and Agility defenses and takes -1 from their Run Speed.",
         "restriction": ""
     },
     {
+        "id": 51,
         "title": "Sneaky",
         "description": "The character has an edge on Agility checks when sneaking around. Enemies have trouble on Vigilance checks to detectthe character when the character is invisible or hiding.", 
         "restriction": ""
     },
     {
+        "id": 52,
         "title": "Stranger",
         "description": "The character doesn't understand local customs. They have trouble on checks made when trying to decipher such things or when trying to pass themselves off as a local.",
         "restriction": ""
     },
     {
+        "id": 53,
         "title": "Surprising Power",
         "description": "The character can choose a power they normally wouldn't be able to use. The character will still need to have any prerequisite powers, but they can ignore rank and origin requirements. This trait can be selected multiple times.",
         "restriction": ""
     },
     {
+        "id": 54,
         "title": "Tech Reliance",
         "description": "The character relies on technology for powers. When they take damage that would render them unconscious, they can instead choose to lose all of their technology-related powers and remain conscious with 1 point of Health remaining. Assuming the character has access to parts and tools, lost powers can be repaired after a battle.",
         "restriction": ""
     },
     {
+        "id": 55,
         "title": "Weakness",
         "description": "The character suffers an unusual amount of harm from certain substances. Any attack made with that substance ignores all inherent damage reduction the character has and cannot be healed by their Healing Factor.",
         "restriction": ""
     },
     {
+        "id": 56,
         "title": "Weird",
         "description": "The character has something weird (or even wonderful) about them. This causes people to have strong reactions to them, both good and bad. They have an edge on all Ego checks to persuade people inclined to like them and trouble on all Ego checks against people inclined to dislike them.",
         "restriction": ""
