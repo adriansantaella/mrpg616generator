@@ -1,6 +1,6 @@
 [
     {
-        "rankNumber": 1,
+        "id": 1,
         "name": "Rookie",
         "points": 5,
         "cap": 5,
@@ -8,7 +8,7 @@
         "bonustrait": 1
     },
     {
-        "rankNumber": 2,
+        "id": 2,
         "name": "Protector",
         "points": 10,
         "cap": 6,
@@ -16,7 +16,7 @@
         "bonustrait": 2
     },
     {
-        "rankNumber": 3,
+        "id": 3,
         "name": "Champion",
         "points": 15,
         "cap": 7,
@@ -24,7 +24,7 @@
         "bonustrait": 2
     },
     {
-        "rankNumber": 4,
+        "id": 4,
         "name": "Legend",
         "points": 20,
         "cap": 8,
@@ -32,7 +32,7 @@
         "bonustrait": 2
     },
     {
-        "rankNumber": 5,
+        "id": 5,
         "name": "Mythic",
         "points": 25,
         "cap": 9,
@@ -40,7 +40,7 @@
         "bonustrait": 3
     },
     {
-        "rankNumber": 6,
+        "id": 6,
         "name": "Cosmic",
         "points": 30,
         "cap": 10,

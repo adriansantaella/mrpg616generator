@@ -23,7 +23,7 @@ const defaultStats = {
 
 function App() {
   // generator for MARVEL RPG character stats
-  const [rank, setRank] = useState(null);
+  const [rank, setRank] = useState({});
   const [heroName, setHeroName] = useState('');
   const [gender, setGender] = useState('');
   const [origin, setOrigin] = useState({});
@@ -32,29 +32,8 @@ function App() {
   const [stats, setStats] = useState(defaultStats);
   const { Melee, Agility, Resilience, Vigilance, Ego, Logic } = stats;
 
-  const generateName = () => {
-    const randomName = heronames[Math.floor(Math.random() * heronames.length)];
-    setHeroName(randomName);
-  }
-
-  const generateRank = () => {
-    const randomRank = ranks[Math.floor(Math.random() * ranks.length)];
-    applyRankAndStats(randomRank);
-  }
-
-  const generateOrigin = () => {
-    const randomOrigin = origins[Math.floor(Math.random() * origins.length)];
-    setOrigin(randomOrigin);
-  }
-
-  const generateOccupation = () => {
-    const randomOccupation = occupations[Math.floor(Math.random() * occupations.length)];
-    setOccupation(randomOccupation);
-  }
-
-  const generateGender = () => {
-    const randomGender = genders[Math.floor(Math.random() * genders.length)];
-    setGender(randomGender);
+  const randomizeItem = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)];
   }
 
   const randomAbilitySelection = () => {
@@ -92,11 +71,11 @@ function App() {
   }
 
   const handleGenerate = () => {
-    generateName();
-    generateRank();
-    generateGender();
-    generateOccupation();
-    generateOrigin();
+    setHeroName(randomizeItem(heronames))
+    setGender(randomizeItem(genders))
+    setOrigin(randomizeItem(origins))
+    setOccupation(randomizeItem(occupations))
+    applyRankAndStats(randomizeItem(ranks))
   }
 
   const totalPoints = Object.values(stats).reduce((sum, value) => sum + value, 0);
@@ -123,80 +102,12 @@ function App() {
             <span>General</span>
           </div>
           <div className="section-content">
-
-
-
-            <div className="hero-name stat">
-              <div className="input-group hero-name-input">
-                <span className="stat-label">Name:</span>
-                <input className="input-text" type="text" placeholder="Character Name" value={heroName} onChange={(e) => setHeroName(e.target.value)} />
-              </div>
-              <button className="generate-button" onClick={generateName}><FaDiceD20 /></button>
-            </div>
-
-
-            <div className="gender stat">
-              <div className="input-group hero-name-input">
-                <span className="stat-label">Gender:</span>
-                <select className="input-select gender-select" value={gender} onChange={(e) => setGender(e.target.value)}  >
-                  <option value="">Select Gender</option>
-                  {genders.map((genderOption, index) => (
-                    <option key={index} value={genderOption}>
-                      {genderOption}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <button className="generate-button" onClick={generateGender}><FaDiceD20 /></button>
-            </div>
-
-
-            <div className="origin stat">
-              <div className="input-group origin-input">
-                <span className="stat-label">Origin</span>
-                <select className="input-select origin-select" value={origin.id} onChange={(e) => setOrigin(e.target.value)}>
-                  <option value="">Select Origin</option>
-                  {origins.map((originOption) => (
-                    <option key={originOption.id} value={originOption.id}>
-                      {originOption.title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <button className="generate-button" onClick={generateOrigin}><FaDiceD20 /></button>
-            </div>
-
-
-            <div className="occupation stat">
-              <div className="input-group occupation-input">
-                <span className="stat-label">Occupation</span>
-                <select className="input-select occupation-select" value={occupation.id} onChange={(e) => setOccupation(e.target.value)}>
-                  <option value="">Select Occupation</option>
-                  {occupations.map((occupationOption) => (
-                    <option key={occupationOption.id} value={occupationOption.id}>
-                      {occupationOption.title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <button className="generate-button" onClick={generateOccupation}><FaDiceD20 /></button>
-            </div>
-
-
-
-            <div className="rank-dropdown stat">
-              <div className="input-group rank-input">
-                <span className="stat-label">Rank:</span>
-                <select className="input-select rank-select" value={rank?.name} name="rank" onChange={(e) => applyRankAndStats(ranks.find((r) => r.name === e.target.value))}>
-                  <option value="none">None Selected...</option>
-                  {ranks.map((rank, index) => (
-                    <option key={rank.rankNumber} value={rank.name}>{rank.rankNumber} | {rank.name}</option>)
-                  )}
-                </select>
-              </div>
-              <button className="generate-button" onClick={generateRank}><FaDiceD20 /></button>
-            </div>
-          </div>
+            <InputSelect label="Name" type="text" data={heronames} selectedValue={heroName} randomize={() => setHeroName(randomizeItem(heronames))} onChange={(e) => setHeroName(e.target.value)} />
+            <InputSelect label="Gender" type="select" data={genders} displayProp='title' selectedValue={gender} randomize={() => setGender(randomizeItem(genders))} onChange={(e) => setGender(e.target.value)} />
+            <InputSelect label="Origin" type="select" data={origins} keyName='id' displayProp='title' selectedValue={origin} randomize={() => setOrigin(randomizeItem(origins))} onChange={(e) => setOrigin(e.target.value)} />
+            <InputSelect label="Occupation" type="select" data={occupations} keyName='id' displayProp='title' selectedValue={occupation} randomize={() => setOccupation(randomizeItem(occupations))} onChange={(e) => setOccupation(e.target.value)} />
+            <InputSelect label="Rank" type="select" data={ranks} keyName='id' displayProp='name' selectedValue={rank} randomize={() => applyRankAndStats(randomizeItem(ranks))} onChange={(e) => applyRankAndStats(ranks.find((r) => r.name === e.target.value))} />
+          </div> 
         </article>
 
 
